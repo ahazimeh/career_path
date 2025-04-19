@@ -1,0 +1,79 @@
+interface: change the data from transmitter to electric signals, and in receiver from electric signals to data (0s and 1s)
+  fiber: bits to light signals
+network protocol: set of rules, same network protocol for communications
+
+network topology (layout of a network)
+
+1-bus topology (a cable and devices connected to it)
+  central cable that makes the whole network busy (low performance)
+  all devices rely on the central cable and any issue in it will break the whole network
+  data is sent for all devices
+2-ring topology (circle)
+  easy
+  no data collision
+  issues:
+  should pass between all devices that are between the sender and receiver
+  all devices rely on the central cable and any issue in it will break the whole network
+  difficult to add new devices
+3- mesh topology (each device is connected with other devices)
+  no fault tolerence
+  point to point link
+  security better
+  issues:
+  more expensive
+  more complex network
+4- star topology (central device adn each device connected to it)
+  inexpensive
+  scalable
+  disadvantage
+  single point of failure (solved by redundency by adding aditional switches)
+
+casting: send data through network
+  1- unicast: (1 to 1)
+  2- multicast: (1 to many) message for group
+  3- broadcast (1 to all)
+    limited (send to all devices in same network) send data for all devices in the network (last ip address)
+    direct broadcast (send to another group for all devices)
+
+transmission modes:
+  1- simplex mode (radio)
+  2- half duplex mode (2 ways but not at same time)
+  3- full duplex mode (2 ways but and at same time) (call)
+
+
+lesson 5:
+types of networks (geo)
+  1- PAN(10 to 15m) (mobile and tablet with labtop)
+  2- LAN
+  3- WLAN
+  4- CAN (2 or more lans)
+  5- MAN
+  6- SAN
+  7- WAN
+
+lesson 6:
+types of networks (host role)
+  p2p (peer to peer)
+  client/server
+
+layers:
+application layer (protocols)
+presentation layer (take data in human language to machine language) then compress and encryption
+session layer transmission mode and session management
+transport layer: segmentation (each segment have port and sequence number)
+  flow control, amount of data that can be sent (if receiver can't receive enough data then it will slow things down)
+network layer: (logical addressing and routing)
+data link layer: physical addressing  (mac address for sender and receiver)
+  it let upper layers access the media (transmission media)
+  depending on the media between 2 pc the data link layer will add data in head and trailer for the ip packet
+  - it can add framing, access upper levels in ois model
+  error detection and correction
+
+error detection
+  -parity checking
+  -checksum
+  -crc
+
+data link layer uses protocol called csma (watch traffic and send his message when there is no traffic in the cable)
+
+physical layer (change bits to signals so transmiision media can understand it)
