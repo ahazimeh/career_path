@@ -77,3 +77,47 @@ error detection
 data link layer uses protocol called csma (watch traffic and send his message when there is no traffic in the cable)
 
 physical layer (change bits to signals so transmiision media can understand it)
+
+dns servers: dns resolver, root name server (4 servers all websites), tld server (ex: all sites ending with .com), authortative name server (verify if user is authorized to access ip)
+  pc communicate with dns resolver, go to roon name server, then sends back the ip for .com
+  then dns resolver will communicate with tld server which will send the authortative name server, then dns resolver will communicate with authortative name server to get the ip address
+
+get automatic ip address from dhcp server
+
+no ip address:
+  1- send broadcast to all devices in the network (this packet called dhcp discover) -soure ip address 0.0.0.0, destination ip address 255.255.255.255
+  2- dhcp server sends back dhcp offer (proposed ip address, subnet, leasa time)
+  3- dhcp request (accept the ip address)
+  4- dhcp acknowledgament: configuration for all ip settings
+network admin will configure dhcp to distribute the addresses with certain range
+assign ip address as a lease
+
+request for many ip addresses
+address reservation (reserve a mac for certain ip address such as printer)
+
+arp (address resolution protocol)
+  connect mac address with ip address for target device
+  arp cash (mac addresses in the network that I communicated with)
+
+
+network devices (hub, switch, router)
+  1- hub: connect devices together in 1 network
+    contains ports to connect devices with ethernet
+    send data to all connected devices
+    bad bandwidth and sends data to all
+    1 layer (physical)
+    half duplex
+  2- switch:
+    work with mac address so he only sends for who needs the message
+    switch table
+    fast detection for device
+    layer to device
+    full duplex
+    multiple collision domain
+    save bandwidth
+    increase security
+router:
+  layer 3 device
+  routing table (interface mac address)
+
+lesson 14
