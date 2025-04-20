@@ -121,3 +121,23 @@ router:
   routing table (interface mac address)
 
 lesson 14
+firewall:
+1-packet filtering firewall (firewall on packets over the network) (frewall in the router)
+  ip address and port number in the packet but don't check for payload
+2-statement inspection firewall: like when you accessing youtube and you get packet from someone else
+3-proxy firewall: add proxy
+3-application firewall: protect web application WAF (block suspicious traffic)
+4-next generation firewall
+  url filtering and web filtering
+  dpi (deep packet inspection)
+  ips (intrusion prevention system)
+
+lesson 15:
+DMZ:
+1-trusted network (our network)
+2-untrusted network (private network(internet))
+
+single firewall dmz
+dual firewall dmz (2firewall and 1 dmz in the middle)
+-dmz allow public access to some elements in the company like the mail server
+-dmz for home router (dmz host), gamers uses them
