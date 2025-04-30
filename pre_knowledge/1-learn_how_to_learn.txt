@@ -1,4 +1,3 @@
-arabic:
 -focused mode
 -defused mode (not fucused when thinking such as once sleeping and thinking with weird things) // you should write these ideas because you will forget them
 
@@ -80,3 +79,4 @@ you need 20hours to learn a new skill:
 learn how to learn additional resources
 
 
+pandoc -f markdown -t pdf -o notes.pdf notes.md

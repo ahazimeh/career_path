@@ -1,0 +1,38 @@
+Task 2:
+Q1. 150.200.0.1, 203.0.113.8
+Q2. ARP finds the MAC address by broadcasting a request for a given IP.
+Q3. HTTPS relies on UDP 443 under TLS.
+Q4.
+  Hub: broadcast message to all connected devices in the network
+  Switch: smarter and send messages to the spacific device
+  router: sends data to devices outside the lan
+
+Task 3:
+from terminal:
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=1 ttl=112 time=65.3 ms
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=2 ttl=112 time=64.1 ms
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=3 ttl=112 time=74.4 ms
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=4 ttl=112 time=74.1 ms
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=5 ttl=112 time=73.1 ms
+
+from website
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=1 ttl=112 time=77.4 ms
+64 bytes from mrs09s07-in-f14.1e100.net (172.217.171.238): icmp_seq=2 ttl=112 time=73.8 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 73.771/75.604/77.437/1.833 ms
+
+yes by running the command bellow you can concatinate another command in the system, you probably could delete, modify, or view read files in the server
+  ex: 192.168.191.85 && cat /etc/passwd
+
+
+you will need to update shell to False, with that being said you will need to pass the argument for the command
+output = subprocess.check_output(
+    #cmd,
+    ["ping", "-c", str(count), host],
+    shell=False,
+    text=True,
+    stderr=subprocess.STDOUT,
+    timeout=timeout
+)

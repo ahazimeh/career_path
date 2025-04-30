@@ -141,3 +141,66 @@ single firewall dmz
 dual firewall dmz (2firewall and 1 dmz in the middle)
 -dmz allow public access to some elements in the company like the mail server
 -dmz for home router (dmz host), gamers uses them
+
+
+ports: 0 to 65535
+
+netstat (network connection on device)
+  netstat -n
+
+iana divided port numbers into 3 cats
+  0 -> 1023 (system ports or well known ports) like port 80
+  1024 -> 49151 (user ports or registered ports) companies or devs register them for a service or protocol such as sql, oracle, or others
+  49152 -> 65535 (dynamic or private ports) used by device for every session, as viewing a website, your device will use a port from these
+
+do port scanning
+
+lesson 17:
+VLAN: (virtual local area network)
+mac destination FFFFFFFF broadcast to send for everyone in the network
+vlan is deviding the same network to more than 1 lan for traffic separating or separate broadcast domain
+
+vlan id from 0 to 4096 (we don't use the first or last vlan)
+
+switch have access port to connect devices with switch, trunk port connect between switches and send traffic between 2 traffics
+
+802.1Q  tag (Dot1q tag) (4 bytes have info such as tag protocol identifier tpid) this says that this fram has 802.10 tag
+to differenciate between it and normal ethernet frams
+tci: tag control information containing tag id, so the other switch will read the tag and known for which vlan it is
+- trunk port is tag port, access port is untagged port
+
+split tunnle: only the company traffic will go through the vpn, full tunnle is all requests
+
+
+ip address: class A, B, C (A for big companies, c for home use)
+
+nat translate from private to public ip
+
+
+lesson 19:
+nat types
+  static nat: I assign the public and private addresses
+  public nat: this will be automatic
+  PAT: point address translation (multiple private addresses to single public address)
+    mini to 1 mapping
+    ip address and port number
+
+access point
+
+2.4 than 5ghz band is better for range and ability to cross walls
+but it is much more crowded because many devices use it
+
+for 2.4 Ghz we have 11 bands and only 3 don't interfere
+for 5 Ghz we have 25 bands and all don't interfere
+  2.4 will have more range because it is lower frequency but slower due to interference
+basic service set identifier: bssid (unique number)
+service set identifier: bssid (wifi name)
+
+cloud:
+public, private, hybrid
+hybrid cloud (backup in public cloud)
+
+Iaas (just rent hardware and users handle software)
+paas (we do deployement but management and maintenance is on the cloud)
+
+saad (hosting for the software): cloud provider manage everything
