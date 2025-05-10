@@ -1,0 +1,41 @@
+vulnerability life cycle
+  vulnerability absent -> vulnerability present -> vulnerability known -> (disclosure)vulnerability known publicaly
+  exploit absent -> exploit created -> (disclosure)exploit known publicaly
+  patch absent -> patch created -> (disclosure)patch available publicaly
+zero day attach: vulnerability known and exploited privately
+
+cve: common vulnerabilities and exposures (vulnerabilities have impact on many users)
+
+cve.org
+nvd.nist.gov
+
+pentesting
+pre-engagement (know the scope from the company)
+  1- information gathering
+  2- scanning and enumeration
+  3- vulnerabilities identification
+  4- exploitation
+  5- post exploitation
+
+Phases of Bug Hunting
+  scope -> Reconnaissance & Mapping -> vulnerability discovery -> reporting & disclosure -> validation
+
+bug reader
+
+risk estimation
+  assets: data, location, communication resources, human resources
+    ex: who can update the data and view it
+    location: my laptop is more secure in my home than in coffee shop
+  events
+    vulnerability -> threats
+      impact , event probability
+
+least priveledge: give users minimum required priveledges
+Duress code: as a threat to someone to write you the code for a transaction (give alarm password)
+
+Defense in Depth
+  any potential defense can fail so there should be multiple layers of security
+
+data, application, host, network, primeter (secure every layer)
+
+zero trust: untrust everything, apply least priveledge, log and inspect all network traffic
