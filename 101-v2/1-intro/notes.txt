@@ -46,3 +46,15 @@ mutual authentication (for example when going to instagram website the website s
 Data origin authentication: verify if the message is from alice or hacker
 
 non-repudiation: verify if I did the transaction
+
+replay attack (man resends the same request to the server)
+
+ip spoofing (attacker can change ip address and mac address to bypass firewall or certain control)
+
+sniffing
+  attacker can sniff packets over the network
+
+buffer overflow (to add more characters)
+  attacker sniff what alice is sending to facebook, and then do ip spoofing and reply to alice (maybe by doing dos to the server so he can reply first)
+  2- if the attacker have access to the dns then he can modify the table
+    this can be prevented using public key certificate (digital signature)

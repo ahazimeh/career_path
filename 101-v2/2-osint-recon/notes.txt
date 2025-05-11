@@ -1,0 +1,34 @@
+breach dumps for certain companies online
+dark web forum dumps
+discord/telegram sales (hard for white hat hackers)
+raas markets (attackers selling access)
+web based exploitation
+phishing campaign
+0 day
+insider threat
+
+passive recon(passive interaction with the target)
+active recon (direct interaction with the target)
+
+what should we gather:
+  domains, subdomains, asns, network services
+
+reverse proxy (cloud flare)
+
+cidr (list ip address 203.0.0.114/24) // scan all cidr for the company -> from cidr you can reach a host that can reach to open ports
+
+find more main domains:
+  -crunchbase.com //research a company to look for more websites they own
+  -trademark // google "Copyright 2024 Sony Corporation" and check all domains for the company
+  -ask ai: provide me with the domains and organizations owned by X
+  -favicon
+    open the favicon of a website and get the url for the favicon
+    go to website: favicon-hash.kmsec.uk and get the hash
+    I can search in shodan.io
+  -whois facebook.com (you can pay for the company hosting your website to protect your info (whoisguard))
+    -automatted tools: doomlink (Needs WHOXY API Key), amass
+      https://viewdns.info/reversewhois // you can add an email and check what domains he published
+  -another tool will get the email and check the domains from these emails
+    https://reversewhois.io/
+  tldhunt
+
