@@ -39,3 +39,10 @@ Defense in Depth
 data, application, host, network, primeter (secure every layer)
 
 zero trust: untrust everything, apply least priveledge, log and inspect all network traffic
+
+mutual authentication (for example when going to instagram website the website should proof that it is instagram)
+  this can be achieved using digital signature or digital identity, this is usually done automatically by the browser or os
+
+Data origin authentication: verify if the message is from alice or hacker
+
+non-repudiation: verify if I did the transaction
