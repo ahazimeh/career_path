@@ -30,5 +30,17 @@ find more main domains:
       https://viewdns.info/reversewhois // you can add an email and check what domains he published
   -another tool will get the email and check the domains from these emails
     https://reversewhois.io/
-  tldhunt
+  -tldhunt:
+    ./tldhunt.sh -k ibm -E tlds.txt
 
+gather cidr:
+  asn: group of cidr
+    manual: bgp.he.net (search for ibm)
+    automatter tools: metabigor, asnlookup, amass, asnmap
+    metabigor
+      discover ip of a company/organization
+        echo facebook | ./metabigor net --org -o /tmp/result.txt
+      discover ip of an asn
+        echo AS54115 | ./metabigor net --org -o /tmp/result.txt
+          after this
+          echo 173.0.84.0/24 | /home/mansour/go/bin/dnsx -selent -resp-only -ptr (it will give you all the domains)
