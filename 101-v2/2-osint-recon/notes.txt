@@ -44,3 +44,16 @@ gather cidr:
         echo AS54115 | ./metabigor net --org -o /tmp/result.txt
           after this
           echo 173.0.84.0/24 | /home/mansour/go/bin/dnsx -selent -resp-only -ptr (it will give you all the domains)
+
+Collect subdomains
+  -virustotal.com (check if file, url, domain is malicious)
+    https://www.virustotal.com/gui/domain/avast.com/relations // here in the relations you can view subdomains
+  -github-subdomains -d apple.com -t your_token
+    this search for apple.com inside github
+  -gitlab: /home/..../gitlab-subdomains -d apple.com -t your_token
+  -waybackurls
+    waybackurls apple.com > apple.txt
+    sed -E 's#^(https?://)?([^/]+).*#\2#' apple.txt | uinq // only give me subdomains and not all urls
+    subfinder -d facebook.com (use api token will provide you with better results)
+  -./sudomy -d bugcrowd.com // collects subdomains in automatted way
+    it gives subdomains, port scan, cloudflare, min al live wil unalive hosts, env variables, content, technologies
