@@ -57,3 +57,30 @@ Collect subdomains
     subfinder -d facebook.com (use api token will provide you with better results)
   -./sudomy -d bugcrowd.com // collects subdomains in automatted way
     it gives subdomains, port scan, cloudflare, min al live wil unalive hosts, env variables, content, technologies
+
+Active subdomain enumeration
+DNS enumeration
+NS record: they host the authoritative servers that host DNS for a domain
+
+A records: called host record, these hold the ip address oh a hostname
+MX records: they include the name of the servers responsible for managing email for a domain, and multiple MX records can exist for a domain.
+PTR records: Used in reverse lookup zones, they assist in finding records associated with an IP address
+CNAME records: Canonical Name Records create aliases for other host records
+TXT records: Text records can hold any arbitrary data and serve various purposes, such as domain ownership verification.
+
+ex: host academy.semicolonlb.com, host -t mx academy.semicolonlb.com
+
+gobuster -d apple.com -w /usr/share/wordlist/dirbuster/directory-list-2.3-medium.txt
+  you can use wordlist depending on the origin of the website
+
+tech enumeration:
+  -What web tool
+  -better tool: httpx
+    httpx -l listofURLS.txt // tells me the live subdomains
+    httpx -l listofURLS.txt -td // technology detect
+    httpx -l listofURLS.txt -title // title
+  -weppalyzer: extension helps you know the technologies a website is using
+  -web application firewall | WafwOOf
+    wafwOOf -v https://academy.semicolonlb.com/
+      it tells you the firewall used for security
+
