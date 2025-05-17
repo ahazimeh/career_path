@@ -99,4 +99,20 @@ Google Dorking
   dorks database: google hacking database
   bug bounty helper: https://dorks.faisalahmed.me/
 
+Search Engines (engines): shodan, fofa, censys
 
+Shadoan:
+  org:"ORG name" // organization
+  ssl.cert.subject.cn:"org.com"
+  http.title:"title"
+  x-jenkins 200
+    http.title:"Admin" org:"ibm"
+    country:sa has_screenshot:true -port:3389 // remove this port(rvp remove machines)
+    ip:8.8.8.8
+
+    karma v2 (requires premium api key)
+  another tool
+    shosubgo:
+      ./shosubgo_linux_1_1 -d ibm.com -s key // in this way I can get subdomains
+
+  smap 8.8.8.8 // it uses shodan, similar to nmap scan
