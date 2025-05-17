@@ -84,3 +84,19 @@ tech enumeration:
     wafwOOf -v https://academy.semicolonlb.com/
       it tells you the firewall used for security
 
+*Screenshotting Assets
+  aquaton
+    cat subscreenshot.txt| ./aquaton
+
+*Subdomain takeover
+  a page redirect to an expired subdomain, so I purchase this subdomain and in this case this page will start redirecting to my website
+
+Google Dorking
+  site:semsec.org -www -newsroom -quantum -developer inurl:admin // remove www to look for more specific sites
+    inurl: login "username" "password"
+    "sql injection
+    site:gov.* filetype:pdf
+  dorks database: google hacking database
+  bug bounty helper: https://dorks.faisalahmed.me/
+
+
