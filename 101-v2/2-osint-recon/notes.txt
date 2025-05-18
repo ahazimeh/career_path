@@ -151,3 +151,11 @@ People OSINT
     www.email-format.com
     email reputation
       www.apivoid.com/tools/email-reputation-check/
+  breached accounts
+    dehashed.com // check for breaches // search for leaked passwords, credetials, and sensitive information
+    haveibeenpawned
+    predicta search
+    intelX // email address, bitcoin address, hashes, cidr, ip addresses, urls, your computer hacked...
+  reverse image lookup
+    images.google.com // search this image
+    exiftool file // check metadata
