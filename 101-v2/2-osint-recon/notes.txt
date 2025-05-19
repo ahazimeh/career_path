@@ -132,9 +132,6 @@ attacking s3 butckets
   aws s3 cp s3://butcketName/fileName destinationPath
   note: add --no-sign-request
 
---------------------------------------------------
-Subdomain takeover // is this valid if the subdomain is not commonly used
-
 cloudenum // enumeration on aws, azure, and google cloud
   tools:
     python3 cloudenum.py -k ibm
@@ -159,3 +156,7 @@ People OSINT
   reverse image lookup
     images.google.com // search this image
     exiftool file // check metadata
+
+--------------------------------------------------
+Subdomain takeover // is this valid if the subdomain is not commonly used
+reached line 24

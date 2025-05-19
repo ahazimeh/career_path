@@ -1,0 +1,77 @@
+acquizitions:
+  hakkoda
+  Outblaze
+  DataMirror
+  HOLOSOFX
+  Maersk Data
+
+  RedHat.com
+  Cognos.com
+  Weather.com
+  Softlayer.com
+  HashiCorp.com
+  Turbonomic.com
+  DataStax.com
+  Kubecost.com
+  Prescinto.com
+  NS1.com
+  PolarSecurity.com
+  Instana.com
+  Nordcloud.com
+  PointBase.com
+  AlchemyAPI.com
+  Explorys.com
+  Cleversafe.com
+  WatsonX.ai
+  Kyndryl.com
+
+I took favicon: https://www.ibm.com/content/dam/adobe-cms/default-images/icon-512x512.png
+  I got the hash and searched for it using shodan
+  -Multiple IBM subdomains (www-112.ibm.com, www-vpc-112.ibm.com, www-s35.ibm.com, myibm.ibm.com)
+  -A pre-production environment: preprod-ext.assets.ibm.com (staging environments often have fewer security controls)
+
+  23.76.52.3 is the server IP address
+
+  SSL certificate details:
+    Certificate authority: DigiCert
+    Certificate type and specifics (DigiCert TLS RSA SHA256 2020 CA1)
+    Only supporting TLSv1.2, TLSv1.3 (secure protocols, they've disabled older vulnerable versions)
+
+  HTTP response headers:
+    Security headers showing their security posture (Content-Security-Policy, x-frame-options)
+    Exact server timestamp (Mon, 19 May 2025 12:28:55 GMT)
+    ETag information that could help with server fingerprinting
+
+  Location information:
+
+  Server location: Lithia Springs, United States
+
+
+  New API announcement:
+
+  They've launched a new API for Fast Vulnerability Lookups (CVEDB)
+  New services often contain vulnerabilities before being hardened
+
+
+  Technology indicators:
+
+  CDN usage is indicated
+  Various icons that might reveal tech stack information
+
+Registrant Phone: +1.9147654227
+Registrant Fax: +1.914765437
+Registrant Email: dnsadm@us.ibm.com
+Admin Name: IBM Corporation
+Admin Organization: International Business Machines Corporation
+Admin Street: One New Orchard Road
+Admin City: Armonk
+Admin State/Province: NY
+Admin Postal Code: 10504
+Admin Country: US
+Admin Phone: +1.9144491900
+Admin Phone Ext:
+Admin Fax: +1.9144491900
+Admin Fax Ext:
+Admin Email: dnsadm@us.ibm.com
+*here we can get all registered domains that the admin have registered which could be related to the company
+  https://viewdns.info/reversewhois
