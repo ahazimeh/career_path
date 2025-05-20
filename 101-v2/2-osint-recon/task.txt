@@ -76,3 +76,9 @@ Admin Email: dnsadm@us.ibm.com
 *here we can get all registered domains that the admin have registered which could be related to the company
   https://viewdns.info/reversewhois
   https://reversewhois.io/
+
+
+https://www.ibm.com/ibmid/password1.html
+https://careers.ibm.com/profile/forgot-password/
+https://auth-b2b-twc.ibm.com/auth/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dphoenixadmin%26redirect_uri%3Dhttps%253A%252F%252Fadmin.auth-b2b-twc.ibm.com%252Fadmin%252Fauth-callback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520custom.profile%2520phoenix-admin-api%2520phoenix-api%26state%3D8782cd5e03ba40778c8fae5682b454fe%26nonce%3D6afb83f9745440519b67580a1ff81fd3%26acr_values%3Dtenant%253AADMINISTRATION
+https://aff-wlp.learn.ibm.com/adminCenter/login.jsp
