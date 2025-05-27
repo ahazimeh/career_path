@@ -1,88 +1,91 @@
-acquizitions:
-  hakkoda
-  Outblaze
-  DataMirror
-  HOLOSOFX
-  Maersk Data
+# IBM Corporation - OSINT Intelligence Report
 
-  RedHat.com
-  Cognos.com
-  Weather.com
-  Softlayer.com
-  HashiCorp.com
-  Turbonomic.com
-  DataStax.com
-  Kubecost.com
-  Prescinto.com
-  NS1.com
-  PolarSecurity.com
-  Instana.com
-  Nordcloud.com
-  PointBase.com
-  AlchemyAPI.com
-  Explorys.com
-  Cleversafe.com
-  WatsonX.ai
-  Kyndryl.com
+## Company Overview
 
-I took favicon: https://www.ibm.com/content/dam/adobe-cms/default-images/icon-512x512.png
-  I got the hash and searched for it using shodan
-  -Multiple IBM subdomains (www-112.ibm.com, www-vpc-112.ibm.com, www-s35.ibm.com, myibm.ibm.com)
-  -A pre-production environment: preprod-ext.assets.ibm.com (staging environments often have fewer security controls)
+**Target**: IBM Corporation (International Business Machines Corporation)
+**Primary Domain**: ibm.com
+**Headquarters**: One New Orchard Road, Armonk, NY 10504, US
 
-  23.76.52.3 is the server IP address
+---
 
-  SSL certificate details:
-    Certificate authority: DigiCert
-    Certificate type and specifics (DigiCert TLS RSA SHA256 2020 CA1)
-    Only supporting TLSv1.2, TLSv1.3 (secure protocols, they've disabled older vulnerable versions)
+## Acquisitions
 
-  HTTP response headers:
-    Security headers showing their security posture (Content-Security-Policy, x-frame-options)
-    Exact server timestamp (Mon, 19 May 2025 12:28:55 GMT)
-    ETag information that could help with server fingerprinting
+IBM has acquired the following companies:
 
-  Location information:
+- Hakkoda
+- Outblaze
+- DataMirror
+- HOLOSOFX
+- Maersk Data
+- RedHat.com
+- Cognos.com
+- Weather.com
+- Softlayer.com
+- HashiCorp.com
+- Turbonomic.com
+- DataStax.com
+- Kubecost.com
+- Prescinto.com
+- NS1.com
+- PolarSecurity.com
+- Instana.com
+- Nordcloud.com
+- PointBase.com
+- AlchemyAPI.com
+- Explorys.com
+- Cleversafe.com
+- WatsonX.ai
+- Kyndryl.com
 
-  Server location: Lithia Springs, United States
+---
 
+## Technical Infrastructure
 
-  New API announcement:
+### Server Information
+- **Primary IP**: 23.76.52.3
+- **Location**: Lithia Springs, United States
+- **Favicon**: https://www.ibm.com/content/dam/adobe-cms/default-images/icon-512x512.png
 
-  They've launched a new API for Fast Vulnerability Lookups (CVEDB)
-  New services often contain vulnerabilities before being hardened
+### SSL Certificate Details
+- **Certificate Authority**: DigiCert
+- **Certificate Type**: DigiCert TLS RSA SHA256 2020 CA1
+- **Supported Protocols**: TLSv1.2, TLSv1.3
+- **Server Timestamp**: Mon, 19 May 2025 12:28:55 GMT
 
+### Security Headers
+- Content-Security-Policy implemented
+- X-Frame-Options implemented
+- CDN usage detected
 
-  Technology indicators:
+### Notable Findings
+- **Pre-production Environment**: preprod-ext.assets.ibm.com
+- **New API Service**: Fast Vulnerability Lookups (CVEDB)
 
-  CDN usage is indicated
-  Various icons that might reveal tech stack information
+---
 
-Registrant Phone: +1.9147654227
-Registrant Fax: +1.914765437
-Registrant Email: dnsadm@us.ibm.com
-Admin Name: IBM Corporation
-Admin Organization: International Business Machines Corporation
-Admin Street: One New Orchard Road
-Admin City: Armonk
-Admin State/Province: NY
-Admin Postal Code: 10504
-Admin Country: US
-Admin Phone: +1.9144491900
-Admin Phone Ext:
-Admin Fax: +1.9144491900
-Admin Fax Ext:
-Admin Email: dnsadm@us.ibm.com
-*here we can get all registered domains that the admin have registered which could be related to the company
-  https://viewdns.info/reversewhois
-  https://reversewhois.io/
+## Domain Registration Information
 
+**Registrant Details:**
+- **Phone**: +1.914.765.4227
+- **Fax**: +1.914.765.437
+- **Email**: dnsadm@us.ibm.com
 
+**Admin Contact:**
+- **Name**: IBM Corporation
+- **Organization**: International Business Machines Corporation
+- **Address**: One New Orchard Road, Armonk, NY 10504, US
+- **Phone**: +1.914.449.1900
+- **Email**: dnsadm@us.ibm.com
+
+---
+
+## Exposed URLs and Login Portals
+
+```
 https://www.ibm.com/ibmid/password1.html
 https://careers.ibm.com/profile/forgot-password/
-https://auth-b2b-twc.ibm.com/auth/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dphoenixadmin%26redirect_uri%3Dhttps%253A%252F%252Fadmin.auth-b2b-twc.ibm.com%252Fadmin%252Fauth-callback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520custom.profile%2520phoenix-admin-api%2520phoenix-api%26state%3D8782cd5e03ba40778c8fae5682b454fe%26nonce%3D6afb83f9745440519b67580a1ff81fd3%26acr_values%3Dtenant%253AADMINISTRATION
+https://auth-b2b-twc.ibm.com/auth/login
 https://aff-wlp.learn.ibm.com/adminCenter/login.jsp
-
 https://public.dhe.ibm.com/ibmdl/
 https://public.dhe.ibm.com/storage/
 https://public.dhe.ibm.com/software/
@@ -91,77 +94,87 @@ https://public.dhe.ibm.com/systems/
 https://public.dhe.ibm.com/s390/
 https://www.ibm.com/docs/en/SSHEB3_3.8/resources/Synch_Translated_Data_Of_Existing_Locator_Field_MSSQL.sql
 https://public.dhe.ibm.com/demos/brands/tivoli/index.html.old
-
 http://119.81.104.92/
 https://52.117.24.32/login.php
+```
 
+---
 
-Email:
-  ibmidsupport@ibm.com
-  infoibm@us.ibm.com
-  kirankumar@concentrix.co.uk
-  codom@salesforce.com
-  jessica.gabaldon@merck.com
-  abonia@bpbonline.com
-  avi.mehra@hettshow.co.uk
-  anthony.damico@streamsets.com
-  andrew.bohac@turbonomic.com
-  karina.juarez@teleperformance.com
-  smukherjee@ibm.com
-  william.scardua@unicafe.com.br
-  ankur@indiefluence.in
-  davis.louima@louimabookkeeping.com
-  nicole.bavis@turbonomic.com
-  sachin.kulkarni@fiserv.com
-  akanksha.srivastava@niit.com
-  frank@frankhweber.com
-  leah.carwile@acoustic.com
-  fritz.stumpf@famstumpf.de
-  avanwormer@nc.rr.com
-  jason@sekati.com
-  sachinp@linux.vnet.ibm.com
-  coretta@providence2000.com
-  cammie.morisseau@ibm.com
-  eliav.nir-shalom@singleconsulting.com
-  zakaria.abdellatif@ibm.com
-  naor.tal@care.co.il
-  matthew.barto@turbonomic.com
-  fernandobrito@ebfcargo.com
-  bnmills@crimson.ua.edu
-  vivkumar.c@stc.com.sa
-  chewwoon.foo@ibm.com
-  michael.euler@ibm.com
-  wilfried.glissmann@ibm.com
-  mihai.tudor@ibm.com
-  orjan.granquist@ibm.com
-  hans.wilow@ibm.com
-  shirin.heinrich@ibm.com
-  zoe.jackson@ibm.com
-  scurbishley@ibm.com
-  jtaylor@ibm.com
-  narlyn.dalida@ibm.com
-  floralyn.fajardo@ibm.com
-  nuj.sugue@ibm.com
-  helle.brodersen@ibm.com
-  a.lanskis@ibm.com
-  g.trytell@ibm.com
-  j.nelson@ibm.com
-  n.nuske@ibm.com
-  s.godbee@ibm.com
-  joan.werling@ibm.com
-  boynuts@ibm.com
-  tan.ovo@ibm.com
-  ron.neria@ibm.com
-  edoardo.scozzese@ibm.com
-  chutidej.trinthitipa@ibm.com
-  chandan.kumar@ibm.com
-  peter.lorenzen@ibm.com
-  chris.ntamwira@ibm.com
-  khue.truong@ibm.com
-  oliverweber@ibm.com
+## Email Addresses Discovered
 
-subdomains:
+**Corporate Support:**
+```
+ibmidsupport@ibm.com
+infoibm@us.ibm.com
+dnsadm@us.ibm.com
+```
 
+**IBM Employee Emails:**
+```
+smukherjee@ibm.com
+cammie.morisseau@ibm.com
+zakaria.abdellatif@ibm.com
+chewwoon.foo@ibm.com
+michael.euler@ibm.com
+wilfried.glissmann@ibm.com
+mihai.tudor@ibm.com
+orjan.granquist@ibm.com
+hans.wilow@ibm.com
+shirin.heinrich@ibm.com
+zoe.jackson@ibm.com
+scurbishley@ibm.com
+jtaylor@ibm.com
+narlyn.dalida@ibm.com
+floralyn.fajardo@ibm.com
+nuj.sugue@ibm.com
+helle.brodersen@ibm.com
+a.lanskis@ibm.com
+g.trytell@ibm.com
+j.nelson@ibm.com
+n.nuske@ibm.com
+s.godbee@ibm.com
+joan.werling@ibm.com
+boynuts@ibm.com
+tan.ovo@ibm.com
+ron.neria@ibm.com
+edoardo.scozzese@ibm.com
+chutidej.trinthitipa@ibm.com
+chandan.kumar@ibm.com
+peter.lorenzen@ibm.com
+chris.ntamwira@ibm.com
+khue.truong@ibm.com
+oliverweber@ibm.com
+sachinp@linux.vnet.ibm.com
+```
+
+**External/Partner Emails:**
+```
+kirankumar@concentrix.co.uk
+codom@salesforce.com
+jessica.gabaldon@merck.com
+abonia@bpbonline.com
+avi.mehra@hettshow.co.uk
+anthony.damico@streamsets.com
+andrew.bohac@turbonomic.com
+karina.juarez@teleperformance.com
+william.scardua@unicafe.com.br
+ankur@indiefluence.in
+davis.louima@louimabookkeeping.com
+nicole.bavis@turbonomic.com
+sachin.kulkarni@fiserv.com
+akanksha.srivastava@niit.com
+frank@frankhweber.com
+leah.carwile@acoustic.com
+fritz.stumpf@famstumpf.de
+matthew.barto@turbonomic.com
+```
+
+---
+
+## Subdomains Discovered
+
+**Key Subdomains (Sample):**
+```
 https://accelerator.ca.analytics.ibm.com
 https://ahewi.events.ibm.com
 https://30158.us-south-2.concert.test.saas.ibm.com
@@ -620,3 +633,4 @@ https://wwwstage.ibm.com
 https://wwwtest-api.ibm.com
 https://wwwstage-api.ibm.com
 https://www.research.ibm.com
+```
