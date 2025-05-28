@@ -21,3 +21,10 @@ dos attack
   dos with GolenEye Demo:
     python3 -m http.server 8080
     python3 goldeneye.py http://192.168.0.135:8080
+
+metasploitable:
+  rapid7.com/products/metasploit/metasploitable
+  download and unzip
+  username and passsword: msfadmin
+  go to virtual box and open (do not make a new virtual machine since we downloaded it)
+  please note, go to network adapter and put the connection as host only so only main os can connect to it (do this for kali and metasploitable)
