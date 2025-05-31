@@ -94,3 +94,14 @@ metasploit
       // post explotation
       command: screenshot, shell, download
       I can open the webcam without victim knowledge, manage files, record keystrokes
+
+Initial access
+  upload php file
+  https://www.exploit-db.com/ // database exploits
+
+vulnerability scanning
+  nessus tool
+    sudo dpkg -i Nessus-10.8.4-debian10_amd64.deb
+    sydo systemctl start nessusd.service // he chose nessus essentials
+      in the website he chose basic essentials scan
+        target: victim ip
