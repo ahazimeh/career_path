@@ -28,3 +28,27 @@ metasploitable:
   username and passsword: msfadmin
   go to virtual box and open (do not make a new virtual machine since we downloaded it)
   please note, go to network adapter and put the connection as host only so only main os can connect to it (do this for kali and metasploitable)
+
+check ports
+Nmap
+  nmap -T 5 ipaddress -p 80 // 5 to do the scan aggressively, -p to only scan for this port
+  nmap will try to scan for 15 minutes and then move to the next host
+    -v verbosity // tells you what it is doing step by step
+
+  you can put the ip addresses in file (each line is ip address)
+  nmap -iL list.txt -p 80
+  -oN, -oG, -oS, -oA and other options if we want to output the result
+  nmap ipaddress -p 445 -oN o.txt
+
+  network sweep
+    nmap ipaddress -sP // check if the host is alive
+    nmap ipaddress -p 445,80,22
+  nmap check for top 1000 common used ports and not all ports
+  nmap ipaddress -F // check common services only (fast, maybe 100 ports)
+
+  nmap -sT ipAddress -p- // -p-0-5555
+
+  common commands for nmap:
+    namp -sV -p- ipaddress // scan all ports and attempt to detect service versions
+    nmap -A -p- ipaddress // aggressive scan that includes OS detection, version detection, scrip scanning, and traceroute on all ports (-p-)
+    nmap --script vuln* ipaddress // all scripts contining word vuln, so nmaps tries scripts that scans for vulnerabilities
