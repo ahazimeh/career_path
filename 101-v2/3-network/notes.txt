@@ -52,3 +52,12 @@ Nmap
     namp -sV -p- ipaddress // scan all ports and attempt to detect service versions
     nmap -A -p- ipaddress // aggressive scan that includes OS detection, version detection, scrip scanning, and traceroute on all ports (-p-)
     nmap --script vuln* ipaddress // all scripts contining word vuln, so nmaps tries scripts that scans for vulnerabilities
+
+blue team to detect nmap
+  ips and ids
+  ips // prevention system
+  ids // detection system
+  tool: snort
+
+Command and Control (C2 or C&C)
+  https://docs.google.com/spreadsheets/d/1b4mUxa6cDQuTV2BPC6aA-GR4zGZi0ooPYtBe4IgPsSc/edit#gid=0
