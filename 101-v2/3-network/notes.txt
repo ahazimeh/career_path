@@ -144,3 +144,14 @@ Pentesting SSH
     mitigations: enforce ssh PROTOCOL 2, Disable Root Login, Alter the Default SSH Port
 
 Telnet
+  -unencrypted
+  -bruteforce
+    metasploit:
+    use scanner/telnet/telnet_login
+    show options
+    set RHOST target
+    set USERNAME msfadmin
+    set PASS_FILE newpass.txt
+    run
+
+HTTP protocol
