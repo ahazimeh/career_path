@@ -170,3 +170,13 @@ HTTP protocol
 priveledge escilation
   vertical (escalate from user to root)
   horizontal (from user A to user B)
+
+enumeration before priveledge escilation
+  hostname // sql-srv, web-srv, linux
+  uname -a // kernal version
+  ps aux // all process running on linux server
+  sudo -l // returns different command or softwares that our user can run under the admin permission
+  cat /etc/passwd | cut -d ":" -f 1 // returns different users available on the system
+  tool: linenum
+  -lab:
+    https://tryhackme.com/room/linprivesc
