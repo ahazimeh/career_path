@@ -180,3 +180,31 @@ enumeration before priveledge escilation
   tool: linenum
   -lab:
     https://tryhackme.com/room/linprivesc
+
+Linux privilege escalation with Kernel exploit
+  kernel is a bridge between software and hardware
+  kernel exploitation
+  kernel: Linux 2.6.9- found: Dirty Cow (CVE-2016-5195) exploitdb
+  // priveledge escalation exploit using searchsploit // command line for exploitdb
+  uname -a // get kernel verison
+    search for this kernal
+    you will find the exploit, download it and place it in /tmp dir
+    python3 -m http.server 8080
+    from victim machine download the file using wget
+
+  sudo -l // check what can I run as a root
+  our methodology:
+    -Identify sudo -l allowed binaries
+    -Search for exploits on https://gtfobins.github.io
+    -Run the exploit on the target system
+    ex:
+      nmap --interaction
+      !sh
+
+privilege escalation using linux capabilities
+  login to machine using ssh
+  getcap -r / 2>/dev/null
+    cap_setuid // setuid allow you to set uid of certain process or certain execution, make it 0 so I can run as root
+    /home/karen/vim=cap_setuid+ep
+    https://gtfobins.github.io
+    search vim and go to capabilities
