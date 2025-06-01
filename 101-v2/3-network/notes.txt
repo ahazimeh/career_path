@@ -228,3 +228,4 @@ privilege escalation with suid // files that runs with the permissions of the us
     base64 "$LFILE" | base64 --docode
     now dehash
       hashes.com/en/decrypt/hash
+      suid works depending on the permission of the user but sudo -l always works as root
