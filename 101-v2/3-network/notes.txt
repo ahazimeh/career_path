@@ -166,3 +166,7 @@ HTTP protocol
     run
     shell
   mitigations: use https instead of http and continues scan of CVES (nuclei tool, nessus, openVAS)
+
+priveledge escilation
+  vertical (escalate from user to root)
+  horizontal (from user A to user B)
