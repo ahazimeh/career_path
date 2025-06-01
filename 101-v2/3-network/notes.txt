@@ -208,3 +208,12 @@ privilege escalation using linux capabilities
     /home/karen/vim=cap_setuid+ep
     https://gtfobins.github.io
     search vim and go to capabilities
+
+privilege escalation with contabs
+  1-check /etc/crontab for jobs running and identify the scripts that are running
+  2-check permissions: if the scheduled script or any part of its path is writable by your user, you can inject melicious commands (eg., reverse shell or add user).
+  3-trigger the job: Wait for the cron job to run automatically
+
+  https://www.revshells.com/
+  execute on server
+  on client: nc -lvnp 4465
