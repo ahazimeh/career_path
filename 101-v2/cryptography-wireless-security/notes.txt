@@ -1,0 +1,7 @@
+symetric algorithms
+block ciphers: encrypt data in fixed-size blocks (eg 128 bits)
+stream ciphers: encrypt data bit by bit or byte by byte
+
+des algorithms
+  openssl enc -des-ecb -in clear.txt -out ciphertext.bin -K abcdabcd12345678 -nopad // -ecb is mode // 16 characters in hex so 64 bits
+  openssl enc -des-ecb -d -in ciphertext.bin -out password.txt -K abcdabcd12345678 -nppad // -d for decrypt
