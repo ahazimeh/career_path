@@ -18,3 +18,6 @@ ECB mode // quantity of data is different that what the algorithm requires
   to encrypt data size < block size:
     Padding // add garbage value
     CTR
+
+echo -n "maitham1hadihaid" > clear.txt
+openssl enc -des-ecb -in clear.txt -out out.bin -K abcdabcd12121212 -nopad
