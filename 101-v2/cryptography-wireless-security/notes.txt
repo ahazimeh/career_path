@@ -21,3 +21,10 @@ ECB mode // quantity of data is different that what the algorithm requires
 
 echo -n "maitham1hadihaid" > clear.txt
 openssl enc -des-ecb -in clear.txt -out out.bin -K abcdabcd12121212 -nopad
+
+XOR (1 is true and 1 is false)
+  A xor B = C
+  B xor C = A
+  C xor A = B
+
+
