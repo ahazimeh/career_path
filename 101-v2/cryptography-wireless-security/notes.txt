@@ -5,3 +5,16 @@ stream ciphers: encrypt data bit by bit or byte by byte
 des algorithms
   openssl enc -des-ecb -in clear.txt -out ciphertext.bin -K abcdabcd12345678 -nopad // -ecb is mode // 16 characters in hex so 64 bits
   openssl enc -des-ecb -d -in ciphertext.bin -out password.txt -K abcdabcd12345678 -nppad // -d for decrypt
+
+ECB mode // quantity of data is different that what the algorithm requires
+  to encrypt data size > block size:
+    use ecb (Electronic Code Book).
+      devide blocks and encrypt each 1 by itself
+      -week against known plain text attack // if p1 and p4 are the same then the attacker can know this information
+        so for des where number of keys are limited then the attacker can gues the key
+        (for example the encryption is the same with certain key)
+        ***question (is it still bad when using aes and complicated key)
+    use cbc (Cipher Block Chaining).
+  to encrypt data size < block size:
+    Padding // add garbage value
+    CTR
