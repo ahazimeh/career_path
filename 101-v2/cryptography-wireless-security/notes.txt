@@ -27,4 +27,7 @@ XOR (1 is true and 1 is false)
   B xor C = A
   C xor A = B
 
-
+cipher block chaining (CBC Mode)
+  we will have initialization value that will do xor with p1 then we will encrypt
+  then the next block will do xor with c1 result then encrypt .....
+  ***question: what if we also encrypted IV // then it will take even longer
