@@ -31,3 +31,7 @@ cipher block chaining (CBC Mode)
   we will have initialization value that will do xor with p1 then we will encrypt
   then the next block will do xor with c1 result then encrypt .....
   ***question: what if we also encrypted IV // then it will take even longer
+
+CBC Mode lab
+  openssl enc -des-cbc -in hello.txt -out out.bin -K abcdabcd12345678 -iv 12341234abcdabcd -nopad
+  the data is not repeated
