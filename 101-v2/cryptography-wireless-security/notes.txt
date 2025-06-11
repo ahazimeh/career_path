@@ -35,3 +35,16 @@ cipher block chaining (CBC Mode)
 CBC Mode lab
   openssl enc -des-cbc -in hello.txt -out out.bin -K abcdabcd12345678 -iv 12341234abcdabcd -nopad
   the data is not repeated
+
+padding // just remove the -nopad
+  openssl enc -des-ecb -in clear.txt -out ciphertext.bin -K abcdabcd12345678
+
+stream cipher
+  ***question why: the size of key should be equal to the size of data
+    and how is it usefull if so
+    and why don't we use circular key then
+  real algorithm
+    (old) RC4, SEAL,
+    (modern) salsa20, chacha20 // used a lot in browsers, ex: chacha20 is used by chrome
+    ***question: how changing the data here is worse than the previous algorithm??
+      isn't it same for CBC or even the ecb as well
