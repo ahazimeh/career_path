@@ -48,3 +48,20 @@ stream cipher
     (modern) salsa20, chacha20 // used a lot in browsers, ex: chacha20 is used by chrome
     ***question: how changing the data here is worse than the previous algorithm??
       isn't it same for CBC or even the ecb as well
+
+stream cipher algorithm
+  openssl enc -rc4 -in clear.txt -out cipher.bin -pbkdf2 // password based key derivation function
+  openssl enc -rc4 -d -in cipher.txt -out clear2.bin -pbkdf2 // enter password
+
+// each 1 helps me with something, stream cipher have issue with synchronization if a bit was removed so we can use them for local encryption
+  I can encrypt locally if I am confident there is no malewar reading the key
+  block cipher over network
+
+key destribution
+  -exchange of keys oob (out of bound)
+  -key exchange algorithms
+
+asymetric cryptography
+  high computational load
+  main algorithms:
+    Diffie-Hellman, RSA, DSA, EL GAMAL...
