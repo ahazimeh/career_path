@@ -48,3 +48,30 @@ Symetric CRA Attack
   Mutual Symetric CRA (both ways)
 
 Asymmetrnic CRA
+
+MFA/2FA
+multifactor authentication
+  at least one of those factors should be non-reusable
+OTP
+  One-time passowrd
+  Password valid for one time only
+  imune to sniffing
+  must be protected from brute-force
+
+the S-key System
+  p1=hash(sid) // sid is secret
+  p2=hash(p1)
+  p3=hash(p2) ...
+
+Time Based OTP
+  hash(secret, time)
+  clock syncronization between server and user
+  requires time slot or window time slot. // up to 30 seconds
+
+  time attacks:
+    -on client
+      pretend to be an otp server and send fake time
+      check my phone and steal future otps by modifying the phone time to tomorrow
+    -on server
+      pretend to be an otp server and send fake time (on the server)
+
