@@ -1,0 +1,50 @@
+authentication factors:
+knowledge
+  something only the user knows (password, code...)
+  risk (storage, transmission)
+ownership
+  something only the user processes (authenticator)
+  risk (if the authenticator got stolen, cloaning, unauthorized usage (kept phone opened))
+inherence
+  something the user is (fingerprint)
+  also devices are different
+    physical unclonable function (puff)
+    risk (cannot be replaced if exposed)
+    used only for local authentication
+
+server verify password:
+  case 1: store passowrd in clear text
+  case 2: server stores the digest of the passwords (hash)
+
+reusable passowrds
+  password sniffing (http)
+  password database attacks
+  password guessing
+  password enumeration
+  same password
+
+password storage:
+  client side
+    memorize in head, use encrypted file, password manager...
+  server side
+    never in Cleartext
+    store the digest
+    dictionary attack
+    rainbow table
+    salt
+
+challenge response authentication
+  challenge must not be repeatable to avoid replay
+  replies with the solution of the challenge
+  server computes his own solution and compare
+  the function must be non-invertable
+
+Symetric CRA
+  alice send ID
+  server send back Nonce { 345464445346345 }
+  client sends back Hmac(Nonce, Kc)
+
+Symetric CRA Attack
+  Mutual Symetric CRA (both ways)
+
+Asymmetrnic CRA

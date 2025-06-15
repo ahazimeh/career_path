@@ -65,3 +65,13 @@ asymetric cryptography
   high computational load
   main algorithms:
     Diffie-Hellman, RSA, DSA, EL GAMAL...
+
+digital signature (encrypt using secret key)
+
+RSA
+  the complexity of the operations depends on the number of bits with value 1 in E and D
+  E=3, 17, 65537
+  lab:
+    openssl genrsa -out private.pem 2048
+    openssl rsa -out private.pem -pubout -out public.pem
+    openssl pkeyutl -encrypt/-decrypt -pubin -inkey public/private -in file -out file
