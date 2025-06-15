@@ -97,3 +97,15 @@ hash function
       openssl dgst -md5 msg.txt >md5.txt // use -sha256 instead for less collision
       openssl dgst -md5 -hmac "secret" msg.txt >md5.txt
 
+digital signature doesn't require sending a secret before but digital signature is slower // generating the digital signature then encrypting it
+
+public key certificate
+  send public key
+  x509
+  -Version: 3
+  -Serial number: 12abd123
+  -issues Algorithm: RSA with SHA2
+  -issuer: C=LB O=Semicolon
+  -validity: 1/1/25 - 1/1/26
+  -public key info: public key: xxxxx
+  -CA signature: xxxx:xxxxx
