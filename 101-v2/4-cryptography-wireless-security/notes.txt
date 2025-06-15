@@ -75,3 +75,25 @@ RSA
     openssl genrsa -out private.pem 2048
     openssl rsa -out private.pem -pubout -out public.pem
     openssl pkeyutl -encrypt/-decrypt -pubin -inkey public/private -in file -out file
+
+Diffie-Hellman (DH) and Elliptic Curve Diffie-Hellman (ECDH)
+
+hash function
+  -fast, pre-image resistance, collision resistance
+  sha2
+    md2, md4, md5 can be broken
+    sha224 -> sha512
+    sha512 excellent
+  sha3
+
+  send message with the hash of the message
+    mac, mic, mid
+    mac:
+      hash the message and send the hash with the message
+    enable HMAC
+      add the secret key to the hash // Enable HMAC
+    lab:
+      echo -n "message" >msg.txt
+      openssl dgst -md5 msg.txt >md5.txt // use -sha256 instead for less collision
+      openssl dgst -md5 -hmac "secret" msg.txt >md5.txt
+
