@@ -109,3 +109,15 @@ public key certificate
   -validity: 1/1/25 - 1/1/26
   -public key info: public key: xxxxx
   -CA signature: xxxx:xxxxx
+
+-------------------------------------------------- session --------------------------------------------------
+ctr can replace of padding
+cbc mac
+digital vs handwritten ??
+
+hash detector
+
+use db browser for sqlite
+echo -n 'sdfsdf' | openssl dgst -sha256
+
+hashcat -m 1400 -a 0 hashes.txt rockyou.txt // -sha256 for 1400
