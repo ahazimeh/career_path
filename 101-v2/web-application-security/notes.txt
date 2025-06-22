@@ -1,0 +1,19 @@
+server computer that serves a service
+service apache2 start
+  network bridged
+
+openssh-server
+  service ssh start
+  service ssh status
+  on client: ssh kali@ip_address
+
+netstat -tuln
+
+dns demo:
+  etc/hosts // locally and not dns record
+  apt-get install dnsmasq
+  vi /etc/dnsmasq.conf
+  section: add domains which you want to force to an Ip address here.
+  address
+  service dnsmasq start
+  then update the main wifi configuration to use my dns server rather than the dhcp
