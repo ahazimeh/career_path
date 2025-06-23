@@ -17,3 +17,13 @@ dns demo:
   address
   service dnsmasq start
   then update the main wifi configuration to use my dns server rather than the dhcp
+
+--------------------------------------------------
+skipped web2.0 // skipped hosting as well
+--------------------------------------------------
+api key
+  -used for identification
+  -authentication
+  security measures:
+    -public private key encryption on requests being sent to prevent api leaks
+    -ip whitelisting
