@@ -27,3 +27,21 @@ api key
   security measures:
     -public private key encryption on requests being sent to prevent api leaks
     -ip whitelisting
+
+google dorking:
+  site: tells google to search for results from a certain site only
+  inurl: search for pages with a URL that matches the search string. // inurl:"admin/default.aspx"
+  intitle: find specific string in page title
+  wildcard(*): means any character or series of characters
+  "": exact match
+  OR(|): or operations // "xss" site:(owasp.org | portswigger.net)
+  MINUS (-) // exclude
+  filetype:pdf
+  ex:
+    intitle: "login" site:semicolonlb.com
+    site:semicolonlb.com filetype pdf
+    "username"|"password" site:semicolonlb.com
+    site:semicolonlb.com inurl: "/admin"
+
+Directory Brute Forcing
+  gobuster dir -u https://semicolonlb.com -w /usr/share/wordlists/dirb/big.txt
