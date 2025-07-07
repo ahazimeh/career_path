@@ -1,0 +1,33 @@
+ecb: encrypt each block independent
+cbc: IV, p1
+
+Confidentiality ensures that sensitive information is accessible only to authorized individuals
+  while integrity ensures that data is accurate, complete, and trustworthy, and has not been tampered with or altered without authorization
+
+RSA prime numbers
+
+recon sumarize:
+  -whois facebook.com (you can pay for the company hosting your website to protect your info (whoisguard))
+  -asn: group of cidr
+  -Google Dorking
+    site:semsec.org -www -newsroom -quantum -developer inurl:admin // remove www to look for more specific sites
+      inurl: login "username" "password"
+      "sql injection
+      site:gov.* filetype:pdf
+    dorks database: google hacking database
+    bug bounty helper: https://dorks.faisalahmed.me/
+
+    org:ibm password
+    org:ibm ssh
+    github=dorks.txt
+    tool: trufflehog (check for some securits in the code)
+
+  -httpx
+    It probes websites and servers to discover open ports, services, and endpoints
+
+  -attacking s3 butckets
+    aws s3 ls s3://butcketName
+    aws s3 ls s3://butcketName/folder/
+    // downloading a file from a bucket:
+    aws s3 cp s3://butcketName/fileName destinationPath
+    note: add --no-sign-request

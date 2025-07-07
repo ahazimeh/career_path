@@ -1,0 +1,25 @@
+ARP Poisoning - Quick Summary:
+A network attack where an attacker sends fake ARP (Address Resolution Protocol) messages to link their MAC address with another device's IP address. This allows the attacker to intercept, modify, or block network traffic between devices on the same local network.
+Key purpose: Man-in-the-middle attacks on local networks by redirecting traffic through the attacker's machine.
+Common result: Enables eavesdropping, session hijacking, or denial of service attacks.
+
+Network reconnaissance and port scanning to map network topology and discover vulnerabilities.
+
+  nmap -T 5 ipaddress -p 80 // 5 to do the scan aggressively, -p to only scan for this port
+  nmap will try to scan for 15 minutes and then move to the next host
+    -v verbosity // tells you what it is doing step by step
+
+*msfconsole
+  -f vba (used to exploit vulnerabilities in Microsoft Office documents  like word/excell macros)
+  -f apk: for melicious android applications to exploit android devices
+
+Telnet
+  -unencrypted
+  -bruteforce
+    metasploit:
+    use scanner/telnet/telnet_login
+    show options
+    set RHOST target
+    set USERNAME msfadmin
+    set PASS_FILE newpass.txt
+    run

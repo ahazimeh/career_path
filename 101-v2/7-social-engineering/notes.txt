@@ -67,3 +67,11 @@ phishlet:
     sessions // check sessions
     help sessions
     details 10
+
+  other commands:
+    unauth_url // redirect the user
+    can connect him with gophish
+    blacklist // blacklist users from going to login if he went to another domain
+    redirect_url // redirect the user after getting the token
+    lures 1
+      // to add certain things like og
