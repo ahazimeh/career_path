@@ -1,0 +1,1 @@
+Get-Acl -Path "path" | fl // check for priviledges you have // if you have write, full control, or modify

@@ -1,0 +1,32 @@
+communications channel between compromised hosts and attacker
+Enables remote control, data exfiltration, and lateral movemnet
+  key term: simulating advanced persistent threats (APTs)
+
+How C2 Works
+  1- initial access (phishing, explit, etc.)
+  2- payload delivery to target host
+  3- agent/beacon connects to c2 server
+  4- command execution and data collection
+
+How a C2 Work?
+Open-Source Options:
+  -Empire - PowerShell & Python post-exploitation
+  -Cobalt Strike (Community Edition) - Commercial/Red Team
+  -Silver C2 - Modern cross-platform C2
+  -
+
+What is Empire?
+  Open-source post-exploitation & C2 framework
+  Developed for PowerShell and Python agents
+  supports Windows, Linux, and macOS
+Why Red Teams Use It:
+  fileless payloads (PowerShell-based)
+  strong obfuscation for evasion
+  integration with Mimikatz & other modules
+
+Empire Architecture
+  components:
+    1- listener - waits for agents to connect
+    2- agents - payload that executes commands on the target
+    3- stagers - initial loader to deploy agents
+    4- modules - Scrips for credential dumping, lateral movemnet, etc.

@@ -1,0 +1,64 @@
+initial access:
+  file inclusion
+  phishing
+  leaked credentials
+  unpatched softwares
+  unsecure services
+  Vulnerable Machine
+    Like open rdp
+  misconfigured software and services
+
+how from rce I can get better access
+
+What is PE:
+  pe: portable executable
+  os loader reads program from disk and loads it into memory as process
+    .exe, .bat, .dll ...
+
+    PE file
+    Headers
+    Sections
+
+code injection
+  metasploit generates a process and access it
+  you can inject code into a long lived process
+  code inejction steps:
+    step 0:
+      dropper.exe // initial execution
+        inside it there is the shell code
+    step 1:
+      allocate memory for shell code that is inside dropper.exe
+    step 2: copy shell code
+    step 3: execute shell code
+
+create remote thread technique
+  another injection technique is create thread
+there is an api called createProcess
+
+main.cpp
+
+--------------------------------------------------
+sections:
+  .text (actual code to be executed)
+  .data (function names, global variables)
+  .rsrc (voice, icon, images) // resource section
+windows api:
+
+shell code could be stored in any of the 3 sections
+
+code injection: injecting my code in another process
+
+steps for code injection
+  step 0: dropper.exe // word.exe // melicious file
+  step 1: allocate memory
+  step 2: cope shellcode // to the new allocated memory
+  step 3: execute
+    open target process handle
+      OpenProcess();
+    Allocate Virtual Memory
+      VirtualAllocEx();
+    Write Malicious DII
+      WriteProcessMemory();
+    Executing the Maclicious DLL
+      CreateRemoteThread();
+
