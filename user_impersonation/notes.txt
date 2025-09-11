@@ -1,0 +1,22 @@
+-Pass The Hash
+  allows users to authenticate
+  tools: mimikatz
+
+-Pass The Ticket
+-Over Pass The Ticket
+-Token impersonation (copying token and using it in my session)
+-Process impersonation
+
+when passing the hash I add new process and put the hash, then I do injection on this process and use the token
+
+pass the hash:
+  usemodule powershell_..._pth
+  set user robb.stark
+  set domain north.sevenkingdoms.local
+  set ntln hash
+  set CredtID 5 // I can use this rather than me filling them manually as above
+  execute
+
+pass the ticket:
+  same principle
+  I dump

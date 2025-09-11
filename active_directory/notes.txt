@@ -1,0 +1,10 @@
+kerberos (modern) // 1 time pass
+mtlm (older) //show id every time
+
+components for active directory
+  domain controller (security offices in college)
+  organization units (grouping people for specific rules)
+  group policy object (can apply multiple rules to single group)
+  trust (liu students can play in the football yard of another uni)
+
+kerberos authentication (after 1 hour)

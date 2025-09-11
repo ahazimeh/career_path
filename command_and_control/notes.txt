@@ -30,3 +30,8 @@ Empire Architecture
     2- agents - payload that executes commands on the target
     3- stagers - initial loader to deploy agents
     4- modules - Scrips for credential dumping, lateral movemnet, etc.
+
+//
+
+stager: we tried // windows_cmd_exe // didn't work // linux bash
+

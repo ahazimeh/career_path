@@ -1,0 +1,17 @@
+information I want to collect about the domain
+  what are the users
+  who are the domain controllers (their ip, names, hostnames)
+  user priviledges (ACL)
+  type of hosts
+  GPOs
+  check priviledges, users, groups, access they got, can do rdp on what
+
+tool: bloodhound
+  sharphound.exe -d north.sevenkingdoms.local
+    should be a domain user not local user because we are not sending th id credentials to the domain controller
+    so I need to be running the collector as domain user
+    I can do enumeration as low priviledge domain user
+
+    sharphound.exe -c All
+
+    then injest zip file

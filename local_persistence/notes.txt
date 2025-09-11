@@ -1,0 +1,13 @@
+cron job for linux is scheduled task for windows
+tool: sharpersist
+  sharPersist.exe -h
+  sharPersist.exe -t schtask -c notepad.exe -n mytask -m add -o logon // scheduled task that execute notepad.exe on logon
+  start -> task scheduler
+scheduled tasks can't open gui applications
+
+2nd technique
+  start up folder: windows will execute all executable files in certain folder
+    I have start up folder for certain user and start up folder for all users
+
+3rd technique
+  registry auto run
