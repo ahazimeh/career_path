@@ -1,0 +1,2 @@
+stager type
+  windows shellcode // la7 n7otto bl dropper

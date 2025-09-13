@@ -1,3 +1,8 @@
+change path
+change binary file
+week service binary permissions
+  standard user have modify privillege
+
 Get-Acl -Path "path" | fl // check for priviledges you have // if you have write, full control, or modify
 
 Using WMI to list services and their paths:
