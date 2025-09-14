@@ -7,4 +7,18 @@ components for active directory
   group policy object (can apply multiple rules to single group)
   trust (liu students can play in the football yard of another uni)
 
-kerberos authentication (after 1 hour)
+rule book: set of rules list that can be assigned to groups
+
+sid (unique identifier) to identify any object (users, groups, and computer accounts)
+
+kerberos authentication is netowrk authentication protocol to provide strong authentication for client-server applications
+components:
+  key distribution center (KDC): Central authority for authentication
+  Ticket Granting Ticket (TGT): Initial ticket received upon login
+  Service Tickets: Issues for accessing specific services
+
+tgt
+tgs
+abuses
+  steal tgt, tgs or e-keys
+  decrypt tgt

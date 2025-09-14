@@ -1,0 +1,13 @@
+Brute Force
+Publically accessible resources
+Leaking Secrets in Repo
+Traditional Phishing
+Exploiting resources
+
+https://pastebin.com/4a8SY6gr
+
+each user has access key and secret key
+
+ec2 is virtual machine on cloud
+role: each role has temp credentials
+  each role has access key and secret key

@@ -11,3 +11,4 @@ scheduled tasks can't open gui applications
 
 3rd technique
   registry auto run
+
