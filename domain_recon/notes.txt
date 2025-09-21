@@ -12,6 +12,11 @@ tool: bloodhound
     so I need to be running the collector as domain user
     I can do enumeration as low priviledge domain user
 
+    from victim:
     sharphound.exe -c All
 
-    then injest zip file
+    explore then injest zip file
+    after done go to explore
+      search (Jeor)
+
+36:37, 39min left
