@@ -4,7 +4,7 @@
 
 -Pass The Ticket
 -Over Pass The Ticket
--Token impersonation (copying token and using it in my session)
+-Token impersonation (copying token and using it in my session) // process running as John because there is a token for John inside this process
 -Process impersonation
 
 when passing the hash I add new process and put the hash, then I do injection on this process and use the token
