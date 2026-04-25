@@ -1,0 +1,14 @@
+part 1: Security Challenges in Mobile Ecosystem
+part 2: Case Study: Xenomorph
+part 3: Android Artitecture Fundementals
+part 4: iOS Artitecture Fundementals
+
+Android Artitecture
+  -Applications
+  -System Applications (Camera, Calendar, Email, Dialer)
+  -Java Api Framework (Api applicaiton uses such as location, send notification...framework)
+    these talk with native c and c++ libraries
+  -android compiler
+  -hardware abstraction layer
+  -Linux Kernel
+process sandboxing (built in feature where each application can't access other application's data)
